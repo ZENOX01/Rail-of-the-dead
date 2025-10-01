@@ -12,8 +12,10 @@ material = SubResource("StandardMaterial3D_jrrpr")
 radius = 0.553434
 height = 2.1166
 
-[node name="User" type="CharacterBody3D"]
+[node name="User" type="CharacterBody3D" node_paths=PackedStringArray("raycast", "camera")]
 script = ExtResource("1_m7fwg")
+raycast = NodePath("Camera3D/RayCast3D")
+camera = NodePath("Camera3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_3hcu1")
